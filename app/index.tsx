@@ -1,10 +1,12 @@
 import React from "react";
 import { Redirect } from "expo-router";
-
-const isLogin = true;
+// import { useAuth } from "@clerk/clerk-expo";
 
 const Home = () => {
-  return isLogin ? (
+  // const { isSignedIn } = useAuth(false);
+  const isSignedIn = false;
+
+  return isSignedIn ? (
     <Redirect href="/(root)/(tabs)/home" />
   ) : (
     <Redirect href="/(auth)/welcome" />
